@@ -12,10 +12,14 @@ import { SITE } from "@data/constants";
 const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
 
 // Define the variables that will be used in this component
-const sectionThreeTitle: string = Astro.currentLocale === "fr" ? "Rester à jour" : "Stay up to date";
-const sectionThreeContent: string = Astro.currentLocale === "fr" ? "Restez informé des derniers outils et des offres exclusives." :
-  "Stay updated with the latest tools and exclusive deals.";
-const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafted by";
+const sectionThreeTitle: string =
+  Astro.currentLocale === "fr" ? "Rester à jour" : "Stay up to date";
+const sectionThreeContent: string =
+  Astro.currentLocale === "fr"
+    ? "Restez informé des derniers outils et des offres exclusives."
+    : "Stay updated with the latest tools and exclusive deals.";
+
+const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
 ---
 
 <footer class="w-full bg-neutral-300 dark:bg-neutral-900">
@@ -25,7 +29,23 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
     <div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-5">
       <div class="col-span-full lg:col-span-1">
         <!-- Brand Logo -->
-        <BrandLogo class="h-auto w-32" />
+        <a
+          class="flex-none rounded-lg text-xl font-bold outline-none ring-zinc-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
+          href={homeUrl}
+          aria-label="Brand"
+        >
+          <!--   <BrandLogo class="h-auto w-24" />-->
+          <img
+            src="/andextech-white_gold2-Kittl.svg"
+            alt="logo"
+            class="hidden h-auto w-28 dark:block"
+          />
+          <img
+            src="/andextech-black_gold2-Kittl.svg"
+            alt="logo"
+            class="block h-auto w-28 dark:hidden"
+          />
+        </a>
       </div>
       <!-- An array of links for Product and Company sections -->
       {
@@ -35,7 +55,7 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
               {section.section}
             </h3>
             <ul class="mt-3 grid space-y-3">
-              {section.links.map((link, index) => (
+              {section?.links?.map((link, index) => (
                 <li>
                   <a
                     href={link.url}
@@ -74,13 +94,14 @@ const crafted: string = Astro.currentLocale === "fr" ? "Fabriqué par" : "Crafte
     >
       <div class="flex items-center justify-between">
         <p class="text-sm text-neutral-600 dark:text-neutral-400">
-          © <span id="current-year"></span> {SITE.title}. {crafted}
-          <a
+          © <span id="current-year"></span>
+          {SITE.title}.
+          <!-- <a
             class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
             href="https://sobstvennoai.dev"
             target="_blank"
             rel="noopener noreferrer">sobstvennoAI</a
-          >.
+          >. -->
         </p>
       </div>
 
