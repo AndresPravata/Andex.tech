@@ -1,22 +1,22 @@
 [
   {
-    "heading": "Dedicated Teams",
-    "content": "Benefit from our committed teams who ensure your success is personal. Count on expert guidance and exceptional results throughout your project journey.",
+    "heading": "Trabajo en equipo",
+    "content": "Fundamento esencial de nuestra empresa. Sin él, sería imposible alcanzar nuestros objetivos y construir las soluciones tecnológicas que ofrecemos.",
     "svg": "groups"
   },
   {
-    "heading": "Simplicity and Affordability",
-    "content": "Find easy-to-use, affordable solutions with ScrewFast's line of tools and equipment. Our products make procurement simple and keep projects within budget.",
+    "heading": "Compromiso",
+    "content": "Nos comprometemos a desarrollar soluciones innovadoras y efectivas. Nuestra misión es crecer, mejorar y aprender continuamente para ofrecer una experiencia excepcional a nuestros clientes.",
     "svg": "verified"
   },
   {
-    "heading": "Comprehensive Documentation",
-    "content": "Integrate with ease using ScrewFast's exhaustive guides and libraries. Achieve seamless product adoption with our full suite of documentation designed for your success.",
-    "svg": "books"
+    "heading": "Etica",
+    "content": "Pilar fundamental de la cultura de nuestra empresa. Creemos que actuar con transparencia, honestidad y responsabilidad es esencial para ganar y mantener la confianza de nuestros clientes, empleados y socios. Nuestra dedicación a la ética nos impulsa a mejorar constantemente y a garantizar que todas nuestras prácticas y soluciones reflejen nuestros valores fundamentales.",
+    "svg": "frame"
   },
   {
-    "heading": "User-Centric Design",
-    "content": "Experience the difference with ScrewFast's user-focused design — where functionality meets practicality for an enhanced work experience.",
+    "heading": "Sostenibilidad",
+    "content": "Prioridad central para nosotros. Nos dedicamos a desarrollar soluciones que no solo satisfagan las necesidades de hoy, sino que también protejan y preserven el medio ambiente para futuras generaciones. Adoptamos prácticas responsables y sostenibles en todas nuestras operaciones, desde la selección de materiales eco friendly hasta la implementación de procesos eficientes y ecológicos.",
     "svg": "frame"
   }
 ]
