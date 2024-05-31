@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import colors from 'tailwindcss/colors';
+import colors from "tailwindcss/colors";
 export default {
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
@@ -12,9 +12,11 @@ export default {
       current: "currentColor",
       black: "#000000",
       white: "#ffffff",
+      primary: "#e9b000",
+      primaryDark: "#c49300",
       gray: colors.gray,
       indigo: colors.indigo,
-      neutral: colors.neutral,  // Used mainly for text color
+      neutral: colors.neutral, // Used mainly for text color
       yellow: {
         50: "#fefce8",
         100: "#fef9c3",
@@ -32,7 +34,14 @@ export default {
       red: colors.red, // Used for bookmark icon
       zinc: colors.zinc, // Used mainly for box-shadow
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
+      brightness: {
+        25: "0.25",
+      },
+    },
   },
   plugins: [
     require("tailwindcss/nesting"),
