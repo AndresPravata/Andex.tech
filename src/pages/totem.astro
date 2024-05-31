@@ -1,0 +1,189 @@
+---
+// Import necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import MainSection from "@components/ui/blocks/MainSection.astro";
+import LeftSection from "@components/ui/blocks/LeftSection.astro";
+import RightSection from "@components/ui/blocks/RightSection.astro";
+import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
+
+// Import necessary images
+import blueprints from "@images/blueprints-image.avif";
+import personWorking from "@images/person-working.avif";
+import beforeAfter from "@images/before-after.avif";
+import constructionWorkers from "@images/construction-workers.avif";
+import aerialView from "@images/aerial-view.avif";
+import usingTools from "@images/using-tools.avif";
+import progressBuilding from "@images/progress-building.avif";
+import underConstruction from "@images/under-construction.avif";
+import { SITE } from "@data/constants";
+import waveImage from "@images/waveImage.png";
+import totemText from "@images/totemText.png";
+import boxIcon from "@images/icons/box.svg";
+import settingsIcon from "@images/icons/settings.svg";
+import mobileIcon from "@images/icons/mobile.svg";
+import globeIcon from "@images/icons/globe.svg";
+import IconBlock from "@components/ui/blocks/IconBlock.astro";
+
+import { Image } from "astro:assets";
+import Icon from "@/components/ui/icons/Icon.astro";
+
+interface Article {
+  isRightSection: boolean;
+  title: string;
+  subTitle: string;
+  btnExists?: boolean;
+  btnTitle?: string;
+  btnURL?: string;
+  single?: boolean;
+  img?: any;
+  imgAlt?: string;
+  imgOne?: any;
+  imgOneAlt?: string;
+  imgTwo?: any;
+  imgTwoAlt?: string;
+}
+
+const features = [
+  {
+    title: "Está re bueno",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    icon: settingsIcon,
+  },
+  {
+    title: "Está re bueno",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    icon: mobileIcon,
+  },
+  {
+    title: "Está re bueno",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    icon: globeIcon,
+  },
+  {
+    title: "Está re bueno",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    icon: boxIcon,
+  },
+  {
+    title: "Está re bueno",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    icon: settingsIcon,
+  },
+  {
+    title: "Está re bueno",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    icon: mobileIcon,
+  },
+  {
+    title: "Está re bueno",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    icon: globeIcon,
+  },
+  {
+    title: "Está re bueno",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    icon: boxIcon,
+  },
+];
+
+const pageTitle: string = `Services | ${SITE.title}`;
+---
+
+<MainLayout
+  title={pageTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://screwfast.uk/services",
+    url: "https://screwfast.uk/services",
+    name: "Expert Consultation Services | ScrewFast",
+    description:
+      "Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://screwfast.uk",
+      name: "ScrewFast",
+      description:
+        "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
+    },
+    inLanguage: "en-US",
+  }}
+>
+  <!--MainSection is the introductory section of the page, it also contains a CTA button-->
+  <!-- <MainSection
+    title="¿Tienes un proyecto?"
+    subTitle="At ScrewFast, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
+    btnExists={true}
+    btnTitle="Trabajemos"
+    btnURL="#"
+  /> -->
+  <section
+    class="mx-auto max-w-screen-2xl gap-4 md:grid-cols-2 md:items-center md:gap-8 2xl:max-w-full"
+  >
+    <Image
+      class="brightness-25 absolute bottom-0 left-0 right-0 z-0 w-full object-cover opacity-60 filter"
+      src={waveImage}
+      alt={"waveImage"}
+      draggable={"false"}
+      format={"avif"}
+    />
+    <div class="relative h-screen overflow-hidden">
+      <div class="absolute left-1/2 right-0 top-48 rounded-l-lg bg-primary p-4">
+        <p class="left-1/2 top-48 text-4xl text-gray-900">
+          Nuestro producto estrella!
+        </p>
+      </div>
+      <!-- <p class="absolute left-48 top-64 text-white">
+        PANTALLA LED 4K <br /> DE ALTA CALIDAD
+      </p>
+      <p class="absolute right-48 top-80 text-white">
+        MARCO DE ALTA DENSIDAD <br /> ANTIADHERENTE
+      </p>
+      <p class="absolute bottom-96 left-32 text-white">
+        IMPRESIÓN EN 3D <br /> 100% PERSONALIZABLE
+      </p>
+      <p class="absolute bottom-48 right-48 text-white">
+        TECNOLOGÍA APLICADA <br /> DE PUNTA
+      </p> -->
+      <Image
+        class="absolute bottom-0 left-0 right-0 z-10 w-full object-cover"
+        src={totemText}
+        alt={"totemText"}
+        draggable={"false"}
+        format={"avif"}
+      />
+    </div>
+  </section>
+  <section class="bg-white p-12">
+    <h2 class="mb-12 text-5xl text-gray-900">Características</h2>
+    <div
+      class="grid grid-cols-1 justify-items-center gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+    >
+      {
+        features.map((feat) => (
+          <IconBlock heading={feat.title} content={feat.description}>
+            <Image
+              class="z-10  object-contain"
+              src={feat.icon}
+              alt={"totemText"}
+              draggable={"false"}
+              format={"avif"}
+            />
+          </IconBlock>
+          // <div class="flex max-w-60 flex-col gap-4">
+          //   <h4 class="text-xl font-semibold text-gray-800">{feat.title}</h4>
+          //   <p class="text-sky-400 text-xs font-light">{feat.description}</p>
+          // </div>
+        ))
+      }
+    </div>
+  </section>
+</MainLayout>
