@@ -21,12 +21,19 @@ interface Props {
 This is the main structure for the page.
 We set the language of the page to English and add classes for scrollbar and scroll behavior.
 -->
-<html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
+<html
+  lang={lang}
+  class="scrollbar-hide lenis lenis-smooth scroll-pt-16 bg-[#000000]"
+>
   <head>
     <!-- Adding metadata to the HTML document -->
     <Meta meta={meta} structuredData={structuredData} />
     <!-- Define the title of the page -->
     <title>{title}</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
     <script is:inline>
       // Script to handle dark mode. It will check if the theme is stored in localStorage or if dark theme is preferred by system settings
       if (
@@ -52,14 +59,13 @@ We set the language of the page to English and add classes for scrollbar and scr
       requestAnimationFrame(raf);
     </script>
   </head>
-  <body
-    class="bg-neutral-200 selection:bg-yellow-400 selection:text-neutral-700 dark:bg-neutral-800"
-  >
+  <body class="selection:bg-yellow-400 selection:text-neutral-700">
     <!--
     Setting up the main structure of the page.
     The Navbar is placed at the top, with a slot for the main content and FooterSection at the bottom.
     -->
-    <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
+    <!-- mx-auto max-w-screen-2xl -->
+    <div class="">
       <Navbar />
       <main>
         <slot />
