@@ -7,6 +7,7 @@ import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 
 // Import necessary images
+import pcCodigo from "@/images/pc-codigo.png"
 import ia2 from "@images/ia-2.webp"
 import stack from "@images/stack.png"
 import blueprints from "@images/blueprints-image.avif";
@@ -188,7 +189,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
         <div class="relative md:flex xl:flex hidden h-full items-end lg:block">
           <Image
             class="absolute bottom-0 right-12 h-auto max-w-full rounded-lg pl-14"
-            src={totems}
+            src={pcCodigo}
             alt="totems"
             format={"png"}
           />
