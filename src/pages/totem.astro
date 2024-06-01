@@ -46,8 +46,7 @@ interface Article {
 const features = [
   {
     title: "Metricas",
-    description:
-      "Metricas en tiempo real.",
+    description:"Metricas en tiempo real.",
     icon: settingsIcon,
   },
   {
@@ -141,20 +140,14 @@ const pageTitle: string = `Services | ${SITE.title}`;
     </div>
   </section>
   <section class="bg-transparent p-12">
-    <h2 class="mb-12 text-5xl text-gray-900  dark:text-neutral-200 ">Características</h2>
+    <h2 class="mb-2 text-2xl text-center md:text-5xl lg:xl:text-5xl xl:text-5xl text-gray-900  dark:text-neutral-200 ">Características</h2>
+    <div class="mb-12 h-1 bg-primary rounded-xl"></div>
     <div
-      class="grid grid-cols-1 justify-items-center gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+      class="grid grid-cols-1  gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2"
     >
       {
         features.map((feat) => (
           <IconBlock heading={feat.title} content={feat.description}>
-            <Image
-              class="z-10  object-contain"
-              src={feat.icon}
-              alt={"totemText"}
-              draggable={"false"}
-              format={"avif"}
-            />
           </IconBlock>
           // <div class="flex max-w-60 flex-col gap-4">
           //   <h4 class="text-xl font-semibold text-gray-800">{feat.title}</h4>
