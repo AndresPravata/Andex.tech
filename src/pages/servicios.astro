@@ -43,30 +43,30 @@ interface Article {
 }
 
 const features = [
+{
+  title: "Desarrollo web",
+  description:
+    "En AndexTech, nos especializamos en desarrollo web con un enfoque en crear experiencias UX/UI innovadoras. Nuestro equipo de expertos se dedica a diseñar interfaces intuitivas y atractivas, asegurando una navegación fluida y una excelente experiencia de usuario. Utilizamos las últimas tecnologías y metodologías ágiles para entregar soluciones web que no solo cumplen con los estándares actuales, sino que también anticipan las necesidades futuras.",
+  icon: settingsIcon,
+},
+{
+  title: "Aplicaciones",
+  description:
+    "Nos especializamos en el desarrollo de aplicaciones que se ejecutan tanto en dispositivos móviles como en escritorio. Ofrecemos soluciones a medida que se adaptan perfectamente a las necesidades específicas de cada empresa, asegurando una integración fluida y un rendimiento óptimo en todas las plataformas. Nuestro enfoque personalizado permite a las empresas mejorar su eficiencia operativa, aumentar la satisfacción del cliente y obtener una ventaja competitiva en el mercado. Ya sea para mejorar procesos internos, interactuar con clientes o expandir sus capacidades digitales, nuestras aplicaciones a medida brindan el valor y la innovación que su empresa necesita.",
+  icon: mobileIcon,
+},
   {
-    title: "Desarrollo web",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: settingsIcon,
-  },
+  title: "Hardware e implementación",
+  description:
+    "Ofrecemos soluciones integrales de hardware e implementación, combinando experiencia en electrónica y mecánica para satisfacer las necesidades de su negocio. Desde el desarrollo de dispositivos personalizados hasta la integración de sistemas complejos, nuestro equipo está capacitado para proporcionar soluciones innovadoras y eficientes. Actualmente, estamos desarrollando un brazo robótico para su uso en farmacias, demostrando nuestra capacidad para aplicar la robótica en diversas industrias. Ya sea que necesite automatización, mejoras en procesos o implementación de nuevas tecnologías, AndexTech tiene la experiencia para brindar soluciones efectivas y personalizadas.",
+  icon: globeIcon,
+},
   {
-    title: "Aplicaciones",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: mobileIcon,
-  },
-  {
-    title: "Hardware e implementación",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: globeIcon,
-  },
-  {
-    title: "Totem interactivo",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: boxIcon,
-  },
+  title: "Totem interactivo",
+  description:
+    "Ofrecemos tótems interactivos diseñados para mejorar la interacción de las empresas con sus clientes. Estos dispositivos multifuncionales permiten gestionar turnos, realizar compras y acceder a una variedad de servicios de manera eficiente y autónoma. Los tótems interactivos de AndexTech están equipados con pantallas táctiles de alta resolución y software personalizado que se adapta a las necesidades específicas de cada empresa, facilitando una experiencia de usuario intuitiva y efectiva. Ideales para entornos de retail, oficinas, clínicas y más, nuestros tótems transforman la manera en que los clientes interactúan con su negocio.",
+  icon: boxIcon,
+},
 ];
 const articles: Article[] = [
   {
@@ -152,7 +152,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
   <Image
-    class="brightness-25 absolute left-0 right-0 top-0 z-[-1] w-full object-cover opacity-60 filter"
+    class="brightness-25 absolute h-[500px] md:h-[750px] xl:h-[750px] left-0 right-0 top-0 z-[-1] w-full object-cover opacity-60 filter"
     src={waveImage}
     alt={"waveImage"}
     draggable={"false"}
@@ -160,24 +160,18 @@ const pageTitle: string = `Services | ${SITE.title}`;
   />
   <MainSection
     title="¿Tienes un proyecto?"
-    subTitle="At ScrewFast, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
+    subTitle=""
     btnExists={true}
     btnTitle="Trabajemos"
-    btnURL="mailto:correo@compania.com?subject=Consulta"
+    btnURL="https://wa.me/2604022036"
     blank
   />
   <div class="relative h-60">
     <div
       class="absolute mx-16 flex h-auto min-h-96 rounded-[25px] bg-[#363636]"
     >
-      <div class="w-full lg:grid lg:grid-cols-2">
-        <div class="flex h-full flex-col justify-between gap-12 p-12">
-          <p
-            class="mb-8 max-w-full text-pretty font-light font-normal text-white"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+      <div class="w-full h- lg:grid lg:grid-cols-2">
+        <div class="flex h-[200px] md:h-full xl:h-full flex-col justify-between gap-12 p-6 xl:p-12 md:p-12">
           <div>
             <p
               class="mb-4 max-w-full text-pretty text-right text-xs font-light font-semibold text-white lg:text-left"
@@ -185,7 +179,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
               TOTEM
             </p>
             <p
-              class="max-w-full text-pretty text-right text-4xl font-light font-semibold text-white lg:text-left"
+              class="max-w-full md:text-pretty xl:text-pretty  text-xl md:text-4xl xl:text-4xl font-light font-semibold text-white lg:text-left"
             >
               Somos nuevos pioneros en tecnología aplicada
             </p>
@@ -202,9 +196,9 @@ const pageTitle: string = `Services | ${SITE.title}`;
       </div>
     </div>
   </div>
-  <section class="bg-white p-12 pt-60">
+  <section class="bg-white dark:bg-transparent p-12 pt-60">
     <div
-      class="grid grid-cols-1 justify-items-center gap-12 sm:grid-cols-2 xl:grid-cols-4"
+      class="grid grid-cols-2 justify-items-center gap-12  xl:grid-cols-2"
     >
       {
         features.map((feat) => (
