@@ -11,7 +11,7 @@ interface Props {
 }
 // Define CSS classes for styling the button
 const baseClasses =
-  "group inline-flex items-center justify-center gap-x-2 rounded-lg px-4 py-3 text-sm font-bold text-neutral-50 ring-zinc-500 transition duration-300 focus-visible:ring outline-none";
+  "group inline-flex items-center justify-center gap-x-2 rounded-2xl px-4 py-2 text-sm font-semibold text-neutral-50 ring-zinc-500 transition duration-300 focus-visible:ring outline-none";
 const borderClasses = "border border-transparent";
 const bgColorClasses =
   "bg-primary hover:bg-primaryDark active:bg-orange-500 dark:focus:outline-none";
@@ -30,5 +30,5 @@ const ringClasses = "dark:ring-zinc-200";
   {title}
   <!-- Display the arrow based on the 'noArrow' property -->
 
-  {noArrow ? null : <Icon name="arrowRight" />}
+  <!-- {noArrow ? null : <Icon name="arrowRight" />} -->
 </a>

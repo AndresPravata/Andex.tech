@@ -1,16 +1,19 @@
 ---
+import Icon from "@components/ui/icons/Icon.astro";
 // Destructure the properties from Astro.props
-const { title, url } = Astro.props;
+const { title, url, noArrow, blank } = Astro.props;
 
 // Define TypeScript interface for the properties
 interface Props {
   title?: string;
   url?: string;
+  noArrow?: boolean;
+  blank?: boolean;
 }
 // Define CSS classes for the hyperlink button
 const baseClasses =
-  "inline-flex items-center justify-center gap-x-2 rounded-lg px-4 py-3 text-center text-sm font-medium text-neutral-600 shadow-sm outline-none ring-zinc-500 focus-visible:ring transition duration-300";
-const borderClasses = "border border-neutral-200";
+  "inline-flex items-center justify-center gap-x-2 rounded-lg px-4 py-3 text-center text-sm font-medium text-neutral-600 outline-none ring-zinc-500 focus-visible:ring transition duration-300";
+const borderClasses = "";
 const bgColorClasses = "bg-neutral-300";
 const hoverClasses =
   "hover:bg-neutral-400/50 hover:text-neutral-600 active:text-neutral-700";
@@ -18,8 +21,7 @@ const disableClasses = "disabled:pointer-events-none disabled:opacity-50";
 const fontSizeClasses = "2xl:text-base";
 const ringClasses = "ring-zinc-500";
 
-const darkClasses =
-  "dark:border-neutral-700 dark:bg-zinc-700 dark:text-neutral-300 dark:ring-zinc-200 dark:hover:bg-zinc-600 dark:focus:outline-none";
+const darkClasses = " dark:bg-transparent dark:text-neutral-300";
 ---
 
 <!-- Styled hyperlink -->
@@ -28,4 +30,5 @@ const darkClasses =
   href={url}
 >
   {title}
+  {noArrow ? null : <Icon name="arrowRight" />}
 </a>
