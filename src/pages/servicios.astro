@@ -190,7 +190,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
           <Image
             class="absolute bottom-0 right-12 h-auto max-w-full rounded-lg pl-14"
             src={pcCodigo}
-            alt="totems"
+            alt="pcCodigo"
             format={"png"}
           />
         </div>
@@ -204,13 +204,6 @@ const pageTitle: string = `Services | ${SITE.title}`;
       {
         features.map((feat) => (
           <IconBlock heading={feat.title} content={feat.description}>
-            <Image
-              class="z-10  object-contain"
-              src={feat.icon}
-              alt={"totemText"}
-              draggable={"false"}
-              format={"avif"}
-            />
           </IconBlock>
           // <div class="flex max-w-60 flex-col gap-4">
           //   <h4 class="text-xl font-semibold text-gray-800">{feat.title}</h4>
