@@ -45,53 +45,30 @@ interface Article {
 
 const features = [
   {
-    title: "Está re bueno",
+    title: "Metricas",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+      "Metricas en tiempo real.",
     icon: settingsIcon,
   },
   {
-    title: "Está re bueno",
+    title: "Compatible con smartphone",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+      "Visualiza las visitas a tu negocio desde la comodidad de tu casa.",
     icon: mobileIcon,
   },
   {
-    title: "Está re bueno",
+    title: "Chapa o MDF",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+      "Construido a medida de tu necesidad.",
     icon: globeIcon,
   },
   {
-    title: "Está re bueno",
+    title: "Software a medida",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+      "Turnero? Totem gastronomico? Totem publicitario?. Lo que necesites lo desarrollamos con la identidad de tu marca.",
     icon: boxIcon,
   },
-  {
-    title: "Está re bueno",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: settingsIcon,
-  },
-  {
-    title: "Está re bueno",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: mobileIcon,
-  },
-  {
-    title: "Está re bueno",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: globeIcon,
-  },
-  {
-    title: "Está re bueno",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    icon: boxIcon,
-  },
+  
 ];
 
 const pageTitle: string = `Services | ${SITE.title}`;
@@ -129,15 +106,16 @@ const pageTitle: string = `Services | ${SITE.title}`;
     class="mx-auto max-w-screen-2xl gap-4 md:grid-cols-2 md:items-center md:gap-8 2xl:max-w-full"
   >
     <Image
-      class="brightness-25 absolute bottom-0 left-0 right-0 z-0 w-full object-cover opacity-60 filter"
+      class="brightness-25 absolute top-0 md:bottom-0 h-[500px] md:h-[750px] xl:h-[750px] left-0 right-0 z-0 w-full object-fill opacity-60 filter"
       src={waveImage}
       alt={"waveImage"}
       draggable={"false"}
       format={"avif"}
     />
-    <div class="relative h-screen overflow-hidden">
-      <div class="absolute left-1/2 right-0 top-48 rounded-l-lg bg-primary p-4">
-        <p class="left-1/2 top-48 text-4xl text-gray-900">
+    <div class="relative h-[65vh] md:h-screen xl:md:h-screen overflow-hidden">
+      <div class="absolute -left-2/ right-0 top-6 md:top-12 xl:top-12 rounded-l-lg bg-primary p-4">
+        <p class="left-1/2 md:top-28 xl:top-28
+         text-md md:text-4xl xl:text-4xl text-gray-900">
           Nuestro producto estrella!
         </p>
       </div>
@@ -154,7 +132,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
         TECNOLOGÍA APLICADA <br /> DE PUNTA
       </p> -->
       <Image
-        class="absolute bottom-0 left-0 right-0 z-10 w-full object-cover"
+        class="absolute md:bottom-0 md:left-0 md:right-0 z-10 md:h-[550px] xl:h-[550px] h-[400px]  w-full object-scale-down"
         src={totemText}
         alt={"totemText"}
         draggable={"false"}
@@ -162,8 +140,8 @@ const pageTitle: string = `Services | ${SITE.title}`;
       />
     </div>
   </section>
-  <section class="bg-white p-12">
-    <h2 class="mb-12 text-5xl text-gray-900">Características</h2>
+  <section class="bg-transparent p-12">
+    <h2 class="mb-12 text-5xl text-gray-900  dark:text-neutral-200 ">Características</h2>
     <div
       class="grid grid-cols-1 justify-items-center gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
     >
