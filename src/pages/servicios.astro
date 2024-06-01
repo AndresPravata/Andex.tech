@@ -7,6 +7,8 @@ import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 
 // Import necessary images
+import ia2 from "@images/ia-2.webp"
+import stack from "@images/stack.png"
 import blueprints from "@images/blueprints-image.avif";
 import personWorking from "@images/person-working.avif";
 import beforeAfter from "@images/before-after.avif";
@@ -71,25 +73,23 @@ const features = [
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Delivering Expert Guidance",
-    subTitle:
-      "Embarking on a construction project can be overwhelming. With our professional consultation services, we guide you through every stage, ensuring you make informed decisions. Whether you are a DIY enthusiast or a skilled contractor, our experts are on hand to offer tailored advice on product selection, project scope, and compliance with local regulations.",
-    single: false,
-    imgOne: blueprints,
+    title: "Te ofrecemos Crecimiento",
+    subTitle:"En AndexTech, impulsamos tu negocio hacia el éxito con nuestras soluciones tecnológicas personalizadas. Nuestro equipo de expertos trabaja contigo para desarrollar estrategias innovadoras que optimicen tus procesos y mejoren la eficiencia. Desde la implementación de sistemas avanzados hasta el asesoramiento en transformación digital, te proporcionamos las herramientas necesarias para alcanzar tus objetivos empresariales y superar tus expectativas.",
+    single: true,
+    imgOne: ia2,
     imgOneAlt: "Blueprints and digital tablet with construction plans.",
-    imgTwo: personWorking,
-    imgTwoAlt: "Person working in the office",
+  
   },
   {
     isRightSection: false,
-    title: "Transforming Designs into Reality",
+    title: "Las mejores Tecnologías",
     subTitle:
-      "Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, ScrewFast offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.",
-    img: beforeAfter,
-    imgAlt: "Construction site before and after",
+    "Utilizamos los últimos stacks tecnológicos para garantizar que el desarrollo de tus proyectos sea de primera clase. Desde AWS y servicios en la nube hasta React, JavaScript, TypeScript y bases de datos SQL y NoSQL, empleamos las tecnologías más avanzadas para asegurar que cada solución sea robusta, escalable y eficiente. Nuestro compromiso con la innovación y la excelencia nos permite ofrecerte desarrollos que no solo cumplen, sino que superan las expectativas.",    
+    img: stack,
+    imgAlt: "Stack",
     btnExists: true,
-    btnTitle: "Learn More",
-    btnURL: "#",
+    btnTitle: "Nuestro Whatssap",
+    btnURL: "https://wa.me/2604022036",
   },
   // {
   //   isRightSection: true,
@@ -168,10 +168,10 @@ const pageTitle: string = `Services | ${SITE.title}`;
   />
   <div class="relative h-60">
     <div
-      class="absolute mx-16 flex h-auto min-h-96 rounded-[25px] bg-[#363636]"
+      class="absolute mx-8 md:mx-16 xl:mx-16 md:flex flex h-auto min-h-12 rounded-[25px] bg-[#363636]"
     >
       <div class="w-full lg:grid lg:grid-cols-2">
-        <div class="flex h-[200px] md:h-full xl:h-full flex-col justify-between gap-12 p-6 xl:p-12 md:p-12">
+        <div class="flex h-[138px] md:h-full xl:h-full flex-col justify-between gap-12 p-6 xl:p-12 md:p-12">
           <div>
             <p
               class="mb-4 max-w-full text-pretty text-right text-xs font-light font-semibold text-white lg:text-left"
@@ -185,7 +185,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
             </p>
           </div>
         </div>
-        <div class="relative flex hidden h-full items-end lg:block">
+        <div class="relative md:flex xl:flex hidden h-full items-end lg:block">
           <Image
             class="absolute bottom-0 right-12 h-auto max-w-full rounded-lg pl-14"
             src={totems}
@@ -196,9 +196,9 @@ const pageTitle: string = `Services | ${SITE.title}`;
       </div>
     </div>
   </div>
-  <section class="bg-white dark:bg-transparent p-12 pt-60">
+  <section class="bg-white dark:bg-transparent p-12 pt-0 md:pt-60 xl:pt-60">
     <div
-      class="grid grid-cols-2 justify-items-center gap-12  xl:grid-cols-2"
+      class="grid grid-cols-1 justify-items-center gap-12  xl:grid-cols-2"
     >
       {
         features.map((feat) => (
@@ -219,14 +219,14 @@ const pageTitle: string = `Services | ${SITE.title}`;
       }
     </div>
   </section>
-  <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
+ <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
   They alternate for variety in design.
   The 'btnExists' property is used to toggle the display of a button in these sections.
   When btnExists={true}, a button is displayed.
   This can be used to link to more detailed information or related resources.
   RightSection can also conditionally render one or two images based on the 'single' property.
-  If 'single' is true, it displays one image, otherwise it displays two.
-  -->
+  If 'single' is true, it displays one image, otherwise it displays two.-->
+  <div class="">
   {
     articles.map((article) => {
       return article.isRightSection ? (
@@ -254,7 +254,8 @@ const pageTitle: string = `Services | ${SITE.title}`;
         />
       );
     })
-  }
+  } 
+  </div>
   <!--FeaturesStats section showcases essential stats valuable to users-->
   <!-- <FeaturesStats
     title="By the Numbers"
